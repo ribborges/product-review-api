@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 
 import { clientURL } from "@/config/env";
+import router from "@/router";
 
 // Create express application
 const app = express();
@@ -15,5 +16,8 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Set up routes
+app.use("/api", router());
 
 export default app;
