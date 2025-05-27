@@ -12,7 +12,7 @@ app.use(cors({
     origin: clientURL,
     optionsSuccessStatus: 200,
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"]
+    methods: ["GET", "POST", "PATCH", "DELETE"]
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -7,6 +7,6 @@ export default (router: Router) => {
     router.get("/review/:id", getReview);
     router.get("/reviews", getReviews);
     router.get("/reviews/product/:productId", getReviewsByProductId);
-    router.put("/review/:id", changeReview);
+    router.patch("/review/:id", changeReview);
     router.delete("/review/:id", removeReview);
 };
